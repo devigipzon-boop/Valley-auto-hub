@@ -36,4 +36,4 @@ input, textarea{background:#111;border:1px solid #222;padding:10px;border-radius
 @media (prefers-reduced-motion: no-preference){
   .btn{transition:transform .12s ease; }
   .btn:hover{transform:translateY(-2px)}
-}
+} 
