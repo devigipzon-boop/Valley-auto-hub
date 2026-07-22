@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Valley Auto Hub Nakuru — Quality Cars for Sale</title>
+  <meta name="description" content="Valley Auto Hub Nakuru — Clean cars, fair prices. Call/WhatsApp 0723 554 916. View inventory and sell your car fast.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/logo.png">
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"AutoDealer",
+    "name":"Valley Auto Hub Nakuru",
+    "telephone":"+254723554916",
+    "address":{"@type":"PostalAddress","addressLocality":"Nakuru","addressRegion":"Rift Valley","addressCountry":"KE"},
+    "url":"https://your-username.github.io/your-repo"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <img src="assets/logo.png" alt="Valley Auto Hub Nakuru" class="logo" width="180" height="60">
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Find Your Next Car in Nakuru</h1>
+        <p class="lead">Probox • Vitz • Land Cruiser & more — inspected, cleaned, and ready. Call/WhatsApp <strong>0723 554 916</strong></p>
+        <p class="hero-actions">
+          <a class="btn" href="inventory.html">View Stock</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/254723554916?text=Hi%20Valley%20Auto%20Hub%20I%27m%20interested%20in%20your%20cars" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="container featured" aria-labelledby="featured-heading">
+      <h2 id="featured-heading">Featured Cars</h2>
+      <div class="grid">
+        <article class="card">
+          <a href="cars/probox.html"><img loading="lazy" src="assets/car1.jpg" alt="Toyota Probox 2016"></a>
+          <div class="card-body">
+            <h3><a href="cars/probox.html">Toyota Probox — 2016</a></h3>
+            <p class="muted">Manual — Ksh 1,100,000</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a href="cars/vitz.html"><img loading="lazy" src="assets/car2.jpg" alt="Toyota Vitz 2018"></a>
+          <div class="card-body">
+            <h3><a href="cars/vitz.html">Toyota Vitz — 2018</a></h3>
+            <p class="muted">Automatic — Ksh 1,300,000</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a href="cars/land-cruiser.html"><img loading="lazy" src="assets/car3.jpg" alt="Land Cruiser 2015"></a>
+          <div class="card-body">
+            <h3><a href="cars/land-cruiser.html">Land Cruiser — 2015</a></h3>
+            <p class="muted">Diesel — Ksh 4,800,000</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container sell" aria-labelledby="sell-heading">
+      <h2 id="sell-heading">Sell Your Car Fast</h2>
+      <p>Fill the form below — we will contact you. Submissions open WhatsApp with a prefilled message for fastest replies.</p>
+      <form id="sellForm" onsubmit="return openWhatsApp(event)">
+        <label for="name">Your name</label>
+        <input id="name" name="name" required>
+        <label for="car">Car model & year</label>
+        <input id="car" name="car" required placeholder="e.g. Toyota Probox 2016">
+        <label for="price">Asking price (Ksh)</label>
+        <input id="price" name="price" inputmode="numeric" placeholder="e.g. 1100000">
+        <label for="details">Details (mileage, condition)</label>
+        <textarea id="details" name="details" rows="3" required></textarea>
+        <button class="btn btn-whatsapp" type="submit">Send on WhatsApp</button>
+        <a class="btn" href="mailto:valley@autohub.example?subject=Sell%20my%20car" aria-label="Send email">Or email us</a>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Valley Auto Hub Nakuru — Nakuru, Rift Valley Province</p>
+      <p>Call/WhatsApp: <a href="tel:+254723554916">0723 554 916</a></p>
+    </div>
+  </footer>
+
+<script>
+function openWhatsApp(e){
+  e.preventDefault();
+  const name = encodeURIComponent(document.getElementById('name').value.trim());
+  const car = encodeURIComponent(document.getElementById('car').value.trim());
+  const price = encodeURIComponent(document.getElementById('price').value.trim());
+  const details = encodeURIComponent(document.getElementById('details').value.trim());
+  const msg = `Hi Valley Auto Hub, my name is ${name}. I want to sell: ${car}. Asking: ${price}. Details: ${details}`;
+  const url = `https://wa.me/254723554916?text=${msg}`;
+  window.open(url, '_blank');
+  return false;
+}
+</script>
+</body>
+</html>
